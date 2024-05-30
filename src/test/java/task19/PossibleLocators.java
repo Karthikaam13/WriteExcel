@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class PossibleLocators {
 
 	public static void main(String[] args) throws InterruptedException {
-System.setProperty("webdriver.driver.chrome", "\"E:\\\\ChromeDriver\\\\chromedriver-win64\\\\chromedriver.exe\\\"");
+		System.setProperty("webdriver.driver.chrome", "\"E:\\\\ChromeDriver\\\\chromedriver-win64\\\\chromedriver.exe\\\"");
 		
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.guvi.in/register");
@@ -134,13 +134,13 @@ System.setProperty("webdriver.driver.chrome", "\"E:\\\\ChromeDriver\\\\chromedri
    // Locate the email alert message
       WebElement mobAlert = driver.findElement(By.xpath("//div[text()=\" Hmm...that doesnt look like an mobile number. Try again.\"]"));  
       
-      // Get the text of an email alert message
-      String mobAlertText = emailAlert.getText();
-      System.out.println("Email Alert Text :" +emailAlertText);
+   // Get the text of an Mobile alert message
+      String mobAlertText = mobAlert.getText();
+      System.out.println("Mobile Alert Text :" +mobAlertText);
       
       // Verify the text of the email alert message
       String expectedmobText = " Hmm...that doesnt look like an mobile number. Try again.";
-      if(emailAlertText.equals(expectedEmailText)) 
+      if(mobAlertText.equals(expectedmobText)) 
       {
       	System.out.println("Verification Passed : Alert message for invalid Mob Num is correct");
       } else 
